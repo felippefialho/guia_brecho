@@ -12,7 +12,8 @@ if (!isset($_SESSION['usuario'])) {
 
 try {
     $nome = Utilidades::sanitizaString($_POST['brecho_nome']);
-    $endereco = Utilidades::sanitizaString($_POST['brecho_endereco']);
+    $concEndereco = "{$_POST['rua']}, {$_POST['numero']}, {$_POST['bairro']}, {$_POST['cidade']}/{$_POST['estado']}, {$_POST['cep']}";    
+    $endereco = Utilidades::sanitizaString($concEndereco);
     $rede = Utilidades::sanitizaString($_POST['brecho_rede']);
     $contato = Utilidades::sanitizaString($_POST['brecho_contato']);
     $faixa_ini = Utilidades::sanitizaString($_POST['brecho_faixa_preco_ini']);

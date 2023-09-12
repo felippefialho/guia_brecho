@@ -25,9 +25,27 @@ if (!isset($_SESSION['usuario'])) {
                     <label for="nomebrecho">Nome do Brechó</label>
                     <input class="box-max-input" type="text" name="brecho_nome" id="nomebrecho">
                 </div>
-                <div>
-                    <label for="endereco">Endereço</label>
-                    <input class="box-max-input" type="text" name="brecho_endereco" id="endereco">
+                <div id="fade" class="hide">
+                        <div class="spinner-border text-info hide" role="status" id="load">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                <div id="formCep">
+                    <label for="cep">CEP</label>
+                    <input type="text" class="box-max-input" name="cep" id="cep" minlength="8" maxlength="8" required placeholder="Digite seu CEP...">
+                    <label for="rua">Rua</label>
+                    <input type="text" class="box-max-input" name="rua" id="rua" data-input disabled>
+                    <label for="numero">Numero</label>
+                    <input type="text" class="box-max-input" name="numero" id="numero" data-input disabled>
+                    <label for="bairro">Bairro</label>
+                    <input type="text" class="box-max-input" name="bairro" id="bairro" data-input disabled>
+                    <label for="cidade">Cidade</label>
+                    <input type="text" class="box-max-input" name="cidade" id="cidade" data-input disabled>
+                    <label for="estado">Estado</label>
+                    <input type="text" class="box-max-input" name="estado" id="estado" data-input disabled>
+
+                    <!-- <label for="cep">CEP</label>
+                    <input class="box-max-input" type="number" name="brecho_endereco" id="cep"> -->
                 </div>
                 <div>
                     <label for="redeSocial">Rede Social</label>
